@@ -6,7 +6,7 @@
 /*   By: rakpinar <rakpinar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 18:35:20 by rakpinar          #+#    #+#             */
-/*   Updated: 2023/02/26 18:35:24 by rakpinar         ###   ########.fr       */
+/*   Updated: 2023/02/26 18:43:06 by rakpinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ int	ft_putstr(char *str);
 int	ft_printf(const char *str, ...);
 int	ft_putnbr(long double number, int base, int is_upper);
 int	ft_pointer(long double number, int base, int is_upper);
-int	ft_control(char c, va_list variable);
+int	ft_check(char c, va_list variable);
 
 #endif

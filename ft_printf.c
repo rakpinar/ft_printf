@@ -6,13 +6,13 @@
 /*   By: rakpinar <rakpinar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 18:35:11 by rakpinar          #+#    #+#             */
-/*   Updated: 2023/02/26 18:35:15 by rakpinar         ###   ########.fr       */
+/*   Updated: 2023/02/26 18:42:50 by rakpinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_control(char c, va_list list)
+int	ft_check(char c, va_list list)
 {
 	int	count;
 
@@ -47,7 +47,7 @@ int	ft_printf(const char *str, ...)
 	{
 		if (*str == '%')
 		{
-			val += ft_control(*(str + 1), ap);
+			val += ft_check(*(str + 1), ap);
 			str++;
 		}
 		else
