@@ -6,7 +6,7 @@
 /*   By: rakpinar <rakpinar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 18:37:47 by rakpinar          #+#    #+#             */
-/*   Updated: 2023/02/26 18:37:54 by rakpinar         ###   ########.fr       */
+/*   Updated: 2023/03/01 16:45:41 by rakpinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,11 @@ int	ft_putstr(char *str)
 	return (count);
 }
 
-int	ft_putnbr(long double number, int base, int is_upper)
-{
-	int	count;
-
-	count = 1;
+int	ft_putnbr(long double number, int base, int is_upper)//t_putnbr fonksiyonunda long double veri tipi kullanılmış olmasının sebebi,
+{														//verilen sayının boyutu ve hassasiyeti ile ilgilidir.
+	int	count;											//double veri tipi, float veri tipine göre daha büyük sayıları tutabilir ve daha yüksek bir hassasiyete sahiptir.
+														// Bu nedenle, ft_putnbr fonksiyonu gibi büyük sayılarla çalışan fonksiyonlarda,
+	count = 1;											//long double veri tipi kullanılması gerekebilir.
 	if (number < 0)
 	{
 		count++;
